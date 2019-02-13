@@ -3,9 +3,6 @@
 
     //when dom is ready
     $(document).ready(function () {
-
-
-        // on scroll Navbar Fixed and back to top show
         $(window).on('scroll', function () {
             if ($(window).width() > 600) {
                 if ($(window).scrollTop() > 600) {
@@ -173,27 +170,8 @@
             });
         });
 
-        // Start Easy Pie Chart
-        $('.progress-chart-feature').appear(function () {
-            $('.chart').easyPieChart({
-                animate: 2000,
-                barColor: '#32c5d2',
-                trackColor: '#f6f6f6',
-                scaleColor: '',
-                lineCap: 'round',
-                lineWidth: 10,
-                size: 130
-            });
-        });
-
         //Tooltip
         $('[data-toggle="tooltip"]').tooltip();
-
-        //video background
-        //try {
-        //    jQuery(".player").mb_YTPlayer();
-        //} catch (err) {}
-
 
         //Start Modal Popup
         $('.launch-modal').on('click', function (e) {
@@ -201,58 +179,10 @@
             $('#' + $(this).data('modal-id')).modal();
         });
 
-
         //CountDown
         $(".countdown").countdown({
             date: "07 Aug 2090 00:01:00", //set your date and time. EX: 15 May 2014 12:00:00
             format: "on"
         });
-
-        //Video
-        $(document).ready(function () {
-            // Target your .container, .wrapper, .post, etc.
-            //$(".video-container").fitVids();
-        });
-
-
-
-        // Styles Switcher
-        //$(document).ready(function(){
-        //    $('.open-switcher').click(function(){
-        //        if($(this).hasClass('show-switcher')) {
-        //            $('.switcher-box').css({'left': 0});
-        //            $('.open-switcher').removeClass('show-switcher');
-        //            $('.open-switcher').addClass('hide-switcher');
-        //        }else if(jQuery(this).hasClass('hide-switcher')) {
-        //            $('.switcher-box').css({'left': '-212px'});
-        //            $('.open-switcher').removeClass('hide-switcher');
-        //            $('.open-switcher').addClass('show-switcher');
-        //        }
-        //    });
-        //});
-
-
-        //Layout Switcher
-        //$(".layout-style").change(function(){
-        //    if( $(this).val() == 1){
-        //        $("#container").removeClass("boxed-page"),
-        //        $(window).resize();
-        //    } else{
-        //        $("#container").addClass("boxed-page"),
-        //        $(window).resize();
-        //    }
-        //});
-
-        //Background Switcher
-        //$('.switcher-box .bg-list li a').click(function() {
-        //    var current = $('.switcher-box select[id=layout-style]').find('option:selected').val();
-        //    if(current == '2') {
-        //        var bg = $(this).css("backgroundImage");
-        //        $("body").css("backgroundImage",bg);
-        //    } else {
-        //        alert('Please select boxed layout');
-        //    }
-        //});
     });
-
 })(jQuery);
