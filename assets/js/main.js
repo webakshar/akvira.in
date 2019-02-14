@@ -178,11 +178,5 @@
             e.preventDefault();
             $('#' + $(this).data('modal-id')).modal();
         });
-
-        //CountDown
-        $(".countdown").countdown({
-            date: "07 Aug 2090 00:01:00", //set your date and time. EX: 15 May 2014 12:00:00
-            format: "on"
-        });
     });
 })(jQuery);
